@@ -111,28 +111,37 @@ body{
     <p>Open Mon–Sat. Stop by to browse — many items are available only in-store.</p>
   </section>
 
-  <!-- INVENTORY -->
+  <!-- INVENTORY (Not Editable on Website) -->
   <section id="inventory" class="page">
     <h2>Inventory (A → Z)</h2>
     <p class="notice">Customers must visit the store in person to confirm book availability.</p>
 
-    <div class="table-controls">
-      <button id="addRowBtn">Add Row</button>
-      <button id="deleteSelectedBtn">Delete Selected</button>
-      <button id="exportCsvBtn">Export CSV</button>
-    </div>
-
-    <table id="inventoryTable" class="inventory-table">
+    <table class="inventory-table">
       <thead>
-        <tr><th>Select</th><th>Title</th><th>Author</th><th>Book Number</th></tr>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Book Number</th>
+        </tr>
       </thead>
       <tbody>
+        <!-- Edit inventory ONLY in the code below -->
         <tr>
-          <td><input type="checkbox" /></td>
-          <td contenteditable="true">The Cardinal Way</td>
-          <td contenteditable="true">Jane Reader</td>
-          <td contenteditable="true">1001</td>
+          <td>The Cardinal Way</td>
+          <td>Jane Reader</td>
+          <td>1001</td>
         </tr>
+        <tr>
+          <td>Campus Classics</td>
+          <td>Sam Scholar</td>
+          <td>1002</td>
+        </tr>
+        <tr>
+          <td>Stories of the Nest</td>
+          <td>Emily Feather</td>
+          <td>1003</td>
+        </tr>
+        <!-- Add more rows manually -->
       </tbody>
     </table>
   </section>
@@ -151,14 +160,14 @@ body{
     <div class="staff-grid">
       <div class="staff-card">
         <img src="https://via.placeholder.com/300x200?text=Staff+1" />
-        <h4 contenteditable="true">Alex Cardinal</h4>
-        <p contenteditable="true">Head of Collections — loves campus lit and rare finds.</p>
+        <h4>Alex Cardinal</h4>
+        <p>Head of Collections — loves campus lit and rare finds.</p>
       </div>
 
       <div class="staff-card">
         <img src="https://via.placeholder.com/300x200?text=Staff+2" />
-        <h4 contenteditable="true">Riley Page</h4>
-        <p contenteditable="true">Store Manager — community events and outreach.</p>
+        <h4>Riley Page</h4>
+        <p>Store Manager — community events and outreach.</p>
       </div>
     </div>
   </section>
@@ -182,7 +191,7 @@ body{
   <small>© Cardinal Bookstore</small>
 </footer>
 
-<!-- ---------- JAVASCRIPT (Inline) ---------- -->
+<!-- ---------- JAVASCRIPT (Navigation Only) ---------- -->
 <script>
 // SPA Navigation
 document.querySelectorAll(".nav-link").forEach(btn=>{
@@ -198,40 +207,6 @@ document.querySelectorAll(".nav-link").forEach(btn=>{
     document.getElementById(target).classList.add("visible");
   });
 });
-
-// Inventory Controls
-const table = document.getElementById("inventoryTable");
-
-document.getElementById("addRowBtn").onclick = () => {
-  const r = document.createElement("tr");
-  r.innerHTML = `
-    <td><input type="checkbox"></td>
-    <td contenteditable="true">New Title</td>
-    <td contenteditable="true">Author</td>
-    <td contenteditable="true">0000</td>`;
-  table.querySelector("tbody").appendChild(r);
-};
-
-document.getElementById("deleteSelectedBtn").onclick = () => {
-  table.querySelectorAll("tbody tr").forEach(r=>{
-    if(r.querySelector("input").checked) r.remove();
-  });
-};
-
-document.getElementById("exportCsvBtn").onclick = () => {
-  let csv = "Title,Author,BookNumber\n";
-  table.querySelectorAll("tbody tr").forEach(r=>{
-    const c = r.querySelectorAll("td");
-    csv += `"${c[1].innerText}","${c[2].innerText}","${c[3].innerText}"\n`;
-  });
-
-  const blob = new Blob([csv],{type:"text/csv"});
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "inventory.csv";
-  a.click();
-};
 </script>
 
 </body>
