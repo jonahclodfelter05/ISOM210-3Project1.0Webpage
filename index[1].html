@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cardinal Bookstore</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="site-title">Cardinal Bookstore</h1>
+    <nav class="main-nav">
+      <button class="nav-link active" data-page="home">Home</button>
+      <button class="nav-link" data-page="inventory">Inventory</button>
+      <button class="nav-link" data-page="about">About</button>
+      <button class="nav-link" data-page="contact">Contact</button>
+    </nav>
+  </header>
+  <main class="container">
+    <section id="home" class="page visible">
+      <h2>Welcome to Cardinal Bookstore</h2>
+      <p class="lead">A family-owned bookstore offering curated selections.</p>
+      <img class="hero-image" src="images/placeholder.png" />
+    </section>
+    <section id="inventory" class="page">
+      <h2>Inventory (A → Z)</h2>
+      <p class="notice">Visit in person to confirm availability.</p>
+      <div class="table-controls">
+        <button id="addRowBtn">Add Row</button>
+        <button id="deleteSelectedBtn">Delete Selected</button>
+        <button id="exportCsvBtn">Export CSV</button>
+      </div>
+      <table id="inventoryTable" class="inventory-table">
+        <thead><tr><th>Select</th><th>Title</th><th>Author</th><th>Book Number</th></tr></thead>
+        <tbody><tr><td><input type="checkbox"/></td><td contenteditable="true">The Cardinal Way</td><td contenteditable="true">Jane Reader</td><td contenteditable="true">1001</td></tr></tbody>
+      </table>
+    </section>
+    <section id="about" class="page">
+      <h2>About Cardinal Bookstore</h2>
+      <img class="about-image" src="images/placeholder.png" />
+      <p class="mission"><strong>Mission:</strong> Our mission statement here.</p>
+      <h3>Meet the Team</h3>
+      <div class="staff-grid">
+        <div class="staff-card"><img src="images/placeholder.png"/><h4 contenteditable="true">Alex Cardinal</h4><p contenteditable="true">Head of collections.</p></div>
+        <div class="staff-card"><img src="images/placeholder.png"/><h4 contenteditable="true">Riley Page</h4><p contenteditable="true">Store manager.</p></div>
+      </div>
+    </section>
+    <section id="contact" class="page">
+      <h2>Contact Us</h2>
+      <p><strong>Address:</strong> 123 Cardinal Lane</p>
+      <p><strong>Phone:</strong> (555) 123-4567</p>
+      <p><strong>Email:</strong> info@cardinalbookstore.example</p>
+      <h3>Location</h3>
+      <img class="location-img" src="images/placeholder.png"/>
+    </section>
+  </main>
+  <footer class="site-footer"><small>© Cardinal Bookstore</small></footer>
+  <script src="app.js"></script>
+</body>
+</html>
