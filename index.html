@@ -37,30 +37,31 @@ body{
 .page{ display:none; }
 .page.visible{ display:block; }
 
-/* --- IMAGE SIZING FIXES --- */
+/* ------------------ */
+/* IMAGE SIZE FIXES   */
+/* ------------------ */
 
-/* Smaller Ball State logos */
-.logo-img {
+/* Ball State logo (Home + About) */
+.logo-small {
+  width:250px;
   display:block;
-  max-width:350px;
-  margin:16px auto;
-  width:100%;
+  margin:20px auto;
 }
 
-/* Larger, taller headshots */
-.staff-card img{
+/* Headshots (taller) */
+.headshot-img {
   width:100%;
-  height:340px;     /* increased from ~240 */
+  height:380px;
   object-fit:cover;
-  border-radius:6px;
+  border-radius:8px;
 }
 
-/* Smaller map screenshot */
-.map-img{
-  display:block;
-  max-width:500px;
-  margin:16px auto;
+/* Map image (smaller) */
+.map-small {
   width:100%;
+  max-width:400px;
+  display:block;
+  margin:20px auto;
 }
 
 .inventory-table{
@@ -114,8 +115,8 @@ body{
       and a cozy place to discover your next read.
     </p>
 
-    <!-- Smaller logo -->
-    <img class="logo-img" src="Ball-State-Cardinals-logo1.png" alt="Ball State Logo" />
+    <!-- Small Logo -->
+    <img src="Ball-State-Cardinals-logo1.png" alt="Ball State Logo" class="logo-small">
   </section>
 
   <!-- INVENTORY -->
@@ -143,24 +144,25 @@ body{
   <section id="about" class="page">
     <h2>About Cardinal Bookstore</h2>
 
-    <!-- Smaller top logo -->
-    <img class="logo-img" src="Ball-State-Cardinals-logo1.png" alt="Ball State Logo" />
+    <!-- Small Logo -->
+    <img src="Ball-State-Cardinals-logo1.png" alt="Ball State Logo" class="logo-small">
 
     <p><strong>Mission:</strong> Our mission is to provide students and community members with affordable, curated books and a welcoming place to explore ideas.</p>
 
     <h3>Meet the Team</h3>
 
     <div class="staff-grid">
-      <!-- Staff 1 -->
+
+      <!-- Taller Headshot 1 -->
       <div class="staff-card">
-        <img src="Headshot1PBL.jpg" alt="Staff Member 1" />
+        <img src="Headshot1PBL.jpg" alt="Staff Member 1" class="headshot-img">
         <h4>Alex Cardinal</h4>
         <p>Head of Collections — loves campus lit and rare finds.</p>
       </div>
 
-      <!-- Staff 2 -->
+      <!-- Taller Headshot 2 -->
       <div class="staff-card">
-        <img src="Headshot2PBL.webp" alt="Staff Member 2" />
+        <img src="Headshot2PBL.webp" alt="Staff Member 2" class="headshot-img">
         <h4>Riley Page</h4>
         <p>Store Manager — community events and outreach.</p>
       </div>
@@ -177,8 +179,8 @@ body{
 
     <h3>Location</h3>
 
-    <!-- Smaller map image -->
-    <img class="map-img" src="PBLSS.png" alt="Map Screenshot" />
+    <!-- Smaller Map Image -->
+    <img src="PBLSS.png" alt="Map Screenshot" class="map-small">
   </section>
 
 </main>
