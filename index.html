@@ -74,7 +74,7 @@ body{
 }
 
 .staff-card img{
-  width:100%; height:160px; object-fit:cover; border-radius:6px;
+  width:100%; height:240px; object-fit:cover; border-radius:6px;
 }
 
 .site-footer{
@@ -106,108 +106,6 @@ body{
       A family-owned bookstore offering curated selections, used and new titles,
       and a cozy place to discover your next read.
     </p>
-    <img class="hero-image" src="https://via.placeholder.com/800x400?text=Bookstore+Image" />
-    <h3>Quick Description</h3>
-    <p>Open Mon–Sat. Stop by to browse — many items are available only in-store.</p>
-  </section>
-
-  <!-- INVENTORY (Not Editable on Website) -->
-  <section id="inventory" class="page">
-    <h2>Inventory (A → Z)</h2>
-    <p class="notice">Customers must visit the store in person to confirm book availability.</p>
-
-    <table class="inventory-table">
-      <thead>
-        <tr>
-          <th>Title</th>
-          <th>Author</th>
-          <th>Book Number</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Edit inventory ONLY in the code below -->
-        <tr>
-          <td>The Cardinal Way</td>
-          <td>Jane Reader</td>
-          <td>1001</td>
-        </tr>
-        <tr>
-          <td>Campus Classics</td>
-          <td>Sam Scholar</td>
-          <td>1002</td>
-        </tr>
-        <tr>
-          <td>Stories of the Nest</td>
-          <td>Emily Feather</td>
-          <td>1003</td>
-        </tr>
-        <!-- Add more rows manually -->
-      </tbody>
-    </table>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="page">
-    <h2>About Cardinal Bookstore</h2>
-    <img class="about-image" src="https://via.placeholder.com/800x400?text=Bookstore" />
-    <p class="mission">
-      <strong>Mission:</strong>
-      Our mission is to provide students and community members with affordable, curated books
-      and a welcoming place to explore ideas, discover favorites, and support local reading culture.
-    </p>
-
-    <h3>Meet the Team</h3>
-    <div class="staff-grid">
-      <div class="staff-card">
-        <img src="https://via.placeholder.com/300x200?text=Staff+1" />
-        <h4>Alex Cardinal</h4>
-        <p>Head of Collections — loves campus lit and rare finds.</p>
-      </div>
-
-      <div class="staff-card">
-        <img src="https://via.placeholder.com/300x200?text=Staff+2" />
-        <h4>Riley Page</h4>
-        <p>Store Manager — community events and outreach.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="page">
-    <h2>Contact Us</h2>
-
-    <p><strong>Address:</strong> 123 Cardinal Lane, Near Ball State Campus</p>
-    <p><strong>Phone:</strong> (555) 123-4567</p>
-    <p><strong>Email:</strong> info@cardinalbookstore.example</p>
-
-    <h3>Location</h3>
-    <img class="location-img" src="https://via.placeholder.com/800x400?text=Location+Image" />
-  </section>
-
-</main>
-
-<!-- ---------- FOOTER ---------- -->
-<footer class="site-footer">
-  <small>© Cardinal Bookstore</small>
-</footer>
-
-<!-- ---------- JAVASCRIPT (Navigation Only) ---------- -->
-<script>
-// SPA Navigation
-document.querySelectorAll(".nav-link").forEach(btn=>{
-  btn.addEventListener("click",()=>{
-    const target = btn.dataset.page;
-
-    document.querySelectorAll(".nav-link")
-      .forEach(b=>b.classList.remove("active"));
-    btn.classList.add("active");
-
-    document.querySelectorAll(".page")
-      .forEach(p=>p.classList.remove("visible"));
-    document.getElementById(target).classList.add("visible");
-  });
-});
-</script>
-
-</body>
-</html>
+    
+    <!-- Home section image: Ball State logo -->
+    <img class="hero-image" src="/mnt/data/Ball-State-Cardinals-logo1.png" alt="Ball State
