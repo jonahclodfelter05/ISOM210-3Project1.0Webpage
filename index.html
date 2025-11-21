@@ -10,25 +10,68 @@
   --accent:#9b1d1d; --muted:#666; --bg:#fafafa;
   --max-width:900px;
 }
-body{margin:0;background:var(--bg);font-family:system-ui;}
-.site-header{background:#fff;padding:16px 0 8px;border-bottom:1px solid #ddd;text-align:center;}
-.site-title{color:var(--accent);margin:0;font-size:28px;}
-.main-nav{margin-top:10px;display:flex;justify-content:center;gap:10px;}
-.nav-link{padding:8px 14px;border-radius:6px;background:#fff;border:1px solid transparent;cursor:pointer;}
-.nav-link.active{background:var(--accent);color:#fff;}
-.container{max-width:var(--max-width);margin:20px auto;padding:0 20px 40px;}
-.page{display:none;} 
-.page.visible{display:block;}
-.hero-image,.about-image,.location-img{
-  width:100%;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.06);margin:12px 0;
+body{
+  margin:0; background:var(--bg); font-family:system-ui;
 }
-.inventory-table{width:100%;border-collapse:collapse;margin-top:12px;}
-.inventory-table th,.inventory-table td{border:1px solid #e6e6e6;padding:8px;}
-.notice{background:#fff3f3;padding:12px;border-radius:6px;border:1px solid #f5dede;}
-.staff-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;}
-.staff-card{background:#fff;padding:12px;border-radius:8px;text-align:center;}
-.staff-card img{width:100%;height:240px;object-fit:cover;border-radius:6px;}
-.site-footer{text-align:center;padding:16px 0;border-top:1px solid #eee;background:#fff;}
+.site-header{
+  background:#fff; padding:16px 0 8px;
+  border-bottom:1px solid #ddd; text-align:center;
+}
+.site-title{
+  color:var(--accent); margin:0; font-size:28px;
+}
+.main-nav{
+  margin-top:10px; display:flex; justify-content:center; gap:10px;
+}
+.nav-link{
+  padding:8px 14px; border-radius:6px;
+  background:#fff; border:1px solid transparent; cursor:pointer;
+}
+.nav-link.active{
+  background:var(--accent); color:#fff;
+}
+.container{
+  max-width:var(--max-width);
+  margin:20px auto; padding:0 20px 40px;
+}
+.page{ display:none; }
+.page.visible{ display:block; }
+
+.hero-image,.about-image,.location-img{
+  width:100%; border-radius:8px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.06);
+  margin:12px 0;
+}
+
+.inventory-table{
+  width:100%; border-collapse:collapse; margin-top:12px;
+}
+.inventory-table th,.inventory-table td{
+  border:1px solid #e6e6e6; padding:8px;
+}
+
+.notice{
+  background:#fff3f3; padding:12px;
+  border-radius:6px; border:1px solid #f5dede;
+}
+
+.staff-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:16px;
+}
+.staff-card{
+  background:#fff; padding:12px;
+  border-radius:8px; text-align:center;
+}
+.staff-card img{
+  width:100%; height:240px; object-fit:cover; border-radius:6px;
+}
+
+.site-footer{
+  text-align:center; padding:16px 0;
+  border-top:1px solid #eee; background:#fff;
+}
 </style>
 </head>
 <body>
@@ -53,7 +96,7 @@ body{margin:0;background:var(--bg);font-family:system-ui;}
       and a cozy place to discover your next read.
     </p>
 
-    <!-- FIXED: Image now loads -->
+    <!-- Home Section Image -->
     <img class="hero-image" src="Ball-State-Cardinals-logo1.png" alt="Ball State Logo" />
   </section>
 
@@ -64,12 +107,28 @@ body{margin:0;background:var(--bg);font-family:system-ui;}
 
     <table class="inventory-table">
       <thead>
-        <tr><th>Title</th><th>Author</th><th>Book Number</th></tr>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Book Number</th>
+        </tr>
       </thead>
       <tbody>
-        <tr><td>The Cardinal Way</td><td>Jane Reader</td><td>1001</td></tr>
-        <tr><td>Campus Classics</td><td>Sam Scholar</td><td>1002</td></tr>
-        <tr><td>Stories of the Nest</td><td>Emily Feather</td><td>1003</td></tr>
+        <tr>
+          <td>The Cardinal Way</td>
+          <td>Jane Reader</td>
+          <td>1001</td>
+        </tr>
+        <tr>
+          <td>Campus Classics</td>
+          <td>Sam Scholar</td>
+          <td>1002</td>
+        </tr>
+        <tr>
+          <td>Stories of the Nest</td>
+          <td>Emily Feather</td>
+          <td>1003</td>
+        </tr>
       </tbody>
     </table>
   </section>
@@ -78,20 +137,28 @@ body{margin:0;background:var(--bg);font-family:system-ui;}
   <section id="about" class="page">
     <h2>About Cardinal Bookstore</h2>
 
+    <!-- About Section Top Image -->
     <img class="about-image" src="Ball-State-Cardinals-logo1.png" alt="Ball State Logo" />
 
-    <p><strong>Mission:</strong> Our mission is to provide students and community members with affordable, curated books and a welcoming place to explore ideas.</p>
+    <p class="mission">
+      <strong>Mission:</strong>
+      Our mission is to provide students and community members with affordable, curated books
+      and a welcoming place to explore ideas, discover favorites, and support local reading culture.
+    </p>
 
     <h3>Meet the Team</h3>
 
     <div class="staff-grid">
+      <!-- Staff Member 1 -->
       <div class="staff-card">
-        <img src="Headshot1PBL.jpg" alt="Staff 1" />
+        <img src="Headshot1PBL.jpg" alt="Staff Member 1" />
         <h4>Alex Cardinal</h4>
         <p>Head of Collections — loves campus lit and rare finds.</p>
       </div>
+
+      <!-- Staff Member 2 -->
       <div class="staff-card">
-        <img src="Headshot2PBL.webp" alt="Staff 2" />
+        <img src="Headshot2PBL.webp" alt="Staff Member 2" />
         <h4>Riley Page</h4>
         <p>Store Manager — community events and outreach.</p>
       </div>
@@ -101,11 +168,15 @@ body{margin:0;background:var(--bg);font-family:system-ui;}
   <!-- CONTACT -->
   <section id="contact" class="page">
     <h2>Contact Us</h2>
-    <p><strong>Email:</strong> info@cardinalbookstore.example</p>
+
+    <p><strong>Address:</strong> 123 Cardinal Lane, Near Ball State Campus</p>
     <p><strong>Phone:</strong> (555) 123-4567</p>
+    <p><strong>Email:</strong> info@cardinalbookstore.example</p>
 
     <h3>Location</h3>
-    <img class="location-img" src="Screenshot-2025-11-21-105626.png" alt="Map Screenshot" />
+
+    <!-- Location Map -->
+    <img class="location-img" src="PBLSS.png" alt="Map Location" />
   </section>
 
 </main>
@@ -115,15 +186,17 @@ body{margin:0;background:var(--bg);font-family:system-ui;}
 </footer>
 
 <script>
-// FIXED SPA NAVIGATION
-document.querySelectorAll(".nav-link").forEach(btn => {
-  btn.addEventListener("click", () => {
+// SPA Navigation
+document.querySelectorAll(".nav-link").forEach(btn=>{
+  btn.addEventListener("click",()=>{
     const target = btn.dataset.page;
 
+    // Update active tab style
     document.querySelectorAll(".nav-link")
       .forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
 
+    // Switch pages
     document.querySelectorAll(".page")
       .forEach(p => p.classList.remove("visible"));
     document.getElementById(target).classList.add("visible");
