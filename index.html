@@ -37,10 +37,30 @@ body{
 .page{ display:none; }
 .page.visible{ display:block; }
 
-.hero-image,.about-image,.location-img{
-  width:100%; border-radius:8px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.06);
-  margin:12px 0;
+/* --- IMAGE SIZING FIXES --- */
+
+/* Smaller Ball State logos */
+.logo-img {
+  display:block;
+  max-width:350px;
+  margin:16px auto;
+  width:100%;
+}
+
+/* Larger, taller headshots */
+.staff-card img{
+  width:100%;
+  height:340px;     /* increased from ~240 */
+  object-fit:cover;
+  border-radius:6px;
+}
+
+/* Smaller map screenshot */
+.map-img{
+  display:block;
+  max-width:500px;
+  margin:16px auto;
+  width:100%;
 }
 
 .inventory-table{
@@ -64,9 +84,6 @@ body{
   background:#fff; padding:12px;
   border-radius:8px; text-align:center;
 }
-.staff-card img{
-  width:100%; height:240px; object-fit:cover; border-radius:6px;
-}
 
 .site-footer{
   text-align:center; padding:16px 0;
@@ -74,6 +91,7 @@ body{
 }
 </style>
 </head>
+
 <body>
 
 <header class="site-header">
@@ -96,8 +114,8 @@ body{
       and a cozy place to discover your next read.
     </p>
 
-    <!-- Home Section Image -->
-    <img class="hero-image" src="Ball-State-Cardinals-logo1.png" alt="Ball State Logo" />
+    <!-- Smaller logo -->
+    <img class="logo-img" src="Ball-State-Cardinals-logo1.png" alt="Ball State Logo" />
   </section>
 
   <!-- INVENTORY -->
@@ -114,21 +132,9 @@ body{
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>The Cardinal Way</td>
-          <td>Jane Reader</td>
-          <td>1001</td>
-        </tr>
-        <tr>
-          <td>Campus Classics</td>
-          <td>Sam Scholar</td>
-          <td>1002</td>
-        </tr>
-        <tr>
-          <td>Stories of the Nest</td>
-          <td>Emily Feather</td>
-          <td>1003</td>
-        </tr>
+        <tr><td>The Cardinal Way</td><td>Jane Reader</td><td>1001</td></tr>
+        <tr><td>Campus Classics</td><td>Sam Scholar</td><td>1002</td></tr>
+        <tr><td>Stories of the Nest</td><td>Emily Feather</td><td>1003</td></tr>
       </tbody>
     </table>
   </section>
@@ -137,26 +143,22 @@ body{
   <section id="about" class="page">
     <h2>About Cardinal Bookstore</h2>
 
-    <!-- About Section Top Image -->
-    <img class="about-image" src="Ball-State-Cardinals-logo1.png" alt="Ball State Logo" />
+    <!-- Smaller top logo -->
+    <img class="logo-img" src="Ball-State-Cardinals-logo1.png" alt="Ball State Logo" />
 
-    <p class="mission">
-      <strong>Mission:</strong>
-      Our mission is to provide students and community members with affordable, curated books
-      and a welcoming place to explore ideas, discover favorites, and support local reading culture.
-    </p>
+    <p><strong>Mission:</strong> Our mission is to provide students and community members with affordable, curated books and a welcoming place to explore ideas.</p>
 
     <h3>Meet the Team</h3>
 
     <div class="staff-grid">
-      <!-- Staff Member 1 -->
+      <!-- Staff 1 -->
       <div class="staff-card">
         <img src="Headshot1PBL.jpg" alt="Staff Member 1" />
         <h4>Alex Cardinal</h4>
         <p>Head of Collections — loves campus lit and rare finds.</p>
       </div>
 
-      <!-- Staff Member 2 -->
+      <!-- Staff 2 -->
       <div class="staff-card">
         <img src="Headshot2PBL.webp" alt="Staff Member 2" />
         <h4>Riley Page</h4>
@@ -175,8 +177,8 @@ body{
 
     <h3>Location</h3>
 
-    <!-- Location Map -->
-    <img class="location-img" src="PBLSS.png" alt="Map Location" />
+    <!-- Smaller map image -->
+    <img class="map-img" src="PBLSS.png" alt="Map Screenshot" />
   </section>
 
 </main>
@@ -191,12 +193,10 @@ document.querySelectorAll(".nav-link").forEach(btn=>{
   btn.addEventListener("click",()=>{
     const target = btn.dataset.page;
 
-    // Update active tab style
     document.querySelectorAll(".nav-link")
       .forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
 
-    // Switch pages
     document.querySelectorAll(".page")
       .forEach(p => p.classList.remove("visible"));
     document.getElementById(target).classList.add("visible");
